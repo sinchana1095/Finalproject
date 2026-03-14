@@ -1,0 +1,549 @@
+# DiabScan Pro - Visual Guide & Screenshots Description
+
+## 📱 Application Flow Diagram
+
+```
+START
+  ↓
+┌─────────────────────────────────────────┐
+│  AUTHENTICATION LANDING PAGE (NEW)      │  ← First page users see
+│  - Beautiful split-screen design        │
+│  - Benefits on left, CTA on right       │
+│  - "Create Account" & "Sign In" buttons │
+│  - Trust badges: 98% accuracy, 10K+ users
+└─────────────────────────────────────────┘
+  ↓ (User chooses)
+  ├─────────────────────────────────────────┐
+  │                                         │
+  ↓                                         ↓
+┌─────────────────────┐       ┌────────────────────────┐
+│  REGISTER PAGE      │       │   LOGIN PAGE           │
+│  - Full Name        │       │   - Email              │
+│  - Email            │       │   - Password           │
+│  - Password         │       │   - Show/Hide toggle   │
+│  - Strength meter   │       │   - Forgot password    │
+│  - Confirm Password │       └────────────────────────┘
+│  - Password match   │
+│    indicator        │
+└─────────────────────┘
+  ↓ (After successful auth)
+┌──────────────────────────────────────────┐
+│  DASHBOARD (Main App)                    │
+│  Header: DiabScan Pro | Steps | Logout   │
+└──────────────────────────────────────────┘
+  ↓
+┌──────────────────────────────────────────┐
+│  STEP 1: FINGERPRINT ANALYSIS            │
+│                                          │
+│  ┌──────────────────────────────────┐   │
+│  │ Choose Mode:                     │   │
+│  │ [Live Scan] OR [Upload Image]    │   │
+│  └──────────────────────────────────┘   │
+│                                          │
+│  If Live Scan:                           │
+│    ┌────────────────────────────────┐   │
+│    │  Canvas Animation              │   │
+│    │  Fingerprint Drawing           │   │
+│    │  Progress: 0% → 100%           │   │
+│    │  Scan Line Animation           │   │
+│    └────────────────────────────────┘   │
+│                                          │
+│  If Upload:                              │
+│    ┌────────────────────────────────┐   │
+│    │  Drag & Drop or Pick File      │   │
+│    │  Accepted: PNG, JPG, BMP       │   │
+│    │  Image Preview                 │   │
+│    │  Analysis Indicators           │   │
+│    └────────────────────────────────┘   │
+│                                          │
+│  [✓] Continue → NEXT STEP                │
+└──────────────────────────────────────────┘
+  ↓
+┌──────────────────────────────────────────┐
+│  STEP 2: HEALTH METRICS                  │
+│                                          │
+│  ┌──────────────────────────────────┐   │
+│  │ [✓] Fingerprint Data Integrated  │   │
+│  │ Risk Score: 8/15                 │   │
+│  │ Fingerprint Thumbnail            │   │
+│  └──────────────────────────────────┘   │
+│                                          │
+│  Your Health Information:                │
+│  • Age:               [45]               │
+│  • Gender:            [Select ▼]         │
+│  • Weight (kg):       [75]               │
+│  • Height (cm):       [175]              │
+│  • BMI (auto):        [24.5] ✓           │
+│  • Blood Pressure:    [140] / [90]       │
+│  • Glucose (mg/dL):   [150]              │
+│  • Insulin (mU/L):    [15]               │
+│                                          │
+│  Lifestyle Factors:                      │
+│  • Exercise:          [3x/week ▼]        │
+│  • Smoking:           [Never ▼]          │
+│  • Family History:    [☑ Diabetes]       │
+│                                          │
+│  [← Back] [Generate Prediction →]        │
+└──────────────────────────────────────────┘
+  ↓
+┌──────────────────────────────────────────┐
+│  STEP 3: PROCESSING                      │
+│                                          │
+│  ╔════════════════════════════════════╗  │
+│  ║ Analyzing Your Health Data...      ║  │
+│  ║                                    ║  │
+│  ║  [████████░░░░░░░░░░] 65%         ║  │
+│  ║                                    ║  │
+│  ║  Evaluating fingerprint patterns  ║  │
+│  ║  Processing health metrics         ║  │
+│  ║  Calculating risk score            ║  │
+│  ║  Generating recommendations        ║  │
+│  ╚════════════════════════════════════╝  │
+└──────────────────────────────────────────┘
+  ↓
+┌──────────────────────────────────────────┐
+│  STEP 4: RESULTS PAGE                    │
+│                                          │
+│  ╔════════════════════════════════════╗  │
+│  ║       YOUR DIABETES RISK            ║  │
+│  ║                                    ║  │
+│  ║        ╭─────────────╮             ║  │
+│  ║       ╱       65%      ╲            ║  │
+│  ║      │  [████████░░]     │          ║  │
+│  ║       ╲                 ╱            ║  │
+│  ║        ╰─────────────╯             ║  │
+│  ║                                    ║  │
+│  ║      ⚠ DIABETIC RISK DETECTED      ║  │
+│  ║                                    ║  │
+│  ║  Your risk level is elevated.      ║  │
+│  ║  Consult with healthcare provider. ║  │
+│  ╚════════════════════════════════════╝  │
+│                                          │
+│  Your Health Metrics:                    │
+│  ┌──────────────────────────────────┐   │
+│  │ 🧬 Age: 45 years                │   │
+│  │ 📏 BMI: 24.5 (Normal)            │   │
+│  │ 💉 Glucose: 150 mg/dL (High)     │   │
+│  │ 💓 BP: 140/90 (Elevated)         │   │
+│  │ 🔬 Insulin: 15 mU/L (High)       │   │
+│  │ 👨‍👩‍👧 Family: Diabetes Present      │   │
+│  │ 🚴 Exercise: 3x/week (Good)       │   │
+│  │ 🚭 Smoking: Never (Good)          │   │
+│  │ 🔍 Fingerprint: 65% risk          │   │
+│  └──────────────────────────────────┘   │
+│                                          │
+│  Personalized Recommendations:           │
+│  • Increase daily physical activity      │
+│  • Monitor blood glucose regularly       │
+│  • Consult endocrinologist               │
+│  • Reduce refined carbohydrates          │
+│  • Maintain healthy weight               │
+│                                          │
+│  📌 Health Quote:                        │
+│  "Take care of your body. It's the      │
+│   only place you have to live."          │
+│   - Jim Rohn                             │
+│                                          │
+│  [📥 Download Report] [📊 View History] │
+│  [🔄 New Scan]                          │
+└──────────────────────────────────────────┘
+  ↓
+┌──────────────────────────────────────────┐
+│  HISTORY PAGE (Optional)                 │
+│                                          │
+│  Your Prediction History:                │
+│  ┌──────────────────────────────────┐   │
+│  │ Date: 2024-01-15 | Risk: 65% ⚠   │   │
+│  │ Verdict: Diabetic Risk Detected  │   │
+│  │ [View] [Delete]                  │   │
+│  ├──────────────────────────────────┤   │
+│  │ Date: 2024-01-10 | Risk: 62% ⚠   │   │
+│  │ Verdict: Diabetic Risk Detected  │   │
+│  │ [View] [Delete]                  │   │
+│  ├──────────────────────────────────┤   │
+│  │ Date: 2024-01-05 | Risk: 58% ⚠   │   │
+│  │ Verdict: Diabetic Risk Detected  │   │
+│  │ [View] [Delete]                  │   │
+│  └──────────────────────────────────┘   │
+│                                          │
+│  [← Back to Scan]                       │
+└──────────────────────────────────────────┘
+```
+
+---
+
+## 🎨 Professional Authentication Landing Page
+
+### Layout (Split Screen)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  DiabScan Pro | Fingerprint Diabetes Prediction System      │
+│  [Logo] DiabScan Pro                        [Back to Home]   │
+│  Fingerprint-Based Diabetes Prediction                       │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────────────────┬──────────────────────┐
+│                       │                      │
+│   LEFT SECTION        │   RIGHT SECTION      │
+│   (Features)          │   (Call to Action)   │
+│                       │                      │
+│ ✅ Trusted by 10K+   │   Get Started        │
+│ users                 │                      │
+│ 98% Accuracy         │   [Create Account]   │
+│ HIPAA Ready          │   ────────────────   │
+│                       │          or          │
+│ ⚡ Instant Analysis   │   [Sign In]          │
+│ 🛡️ Secure & Private  │                      │
+│ 👥 Works on Any      │   No credit card     │
+│    Device            │   required.          │
+│                       │   30 seconds         │
+│ ★★★★★ 5/5 Rating    │   to get started.    │
+│ "Helped me           │                      │
+│ understand my risk"  │   🔒 256-bit         │
+│ - Dr. Sarah Johnson  │      Encrypted       │
+│                       │   🛡️ HIPAA Ready    │
+│ 98% Accuracy         │                      │
+│ 10,000+ Users        │                      │
+│                       │                      │
+└───────────────────────┴──────────────────────┘
+```
+
+---
+
+## 📝 Enhanced Registration Form
+
+```
+┌────────────────────────────────────────┐
+│  Create Your Account                   │
+│  Join DiabScan Pro and start your      │
+│  health journey                        │
+│                                        │
+│  Full Name                             │
+│  👤 [John Doe        ] ✓               │
+│                                        │
+│  Email Address                         │
+│  📧 [john@example.com] ✓               │
+│                                        │
+│  Password                              │
+│  🔒 [••••••••••] 👁️                   │
+│                                        │
+│  Password Strength:                    │
+│  [████████░░░░░░░░░░] Strong           │
+│                                        │
+│  Confirm Password                      │
+│  🔒 [••••••••••] 👁️                   │
+│  ✓ Passwords match                     │
+│                                        │
+│  [Create Account 🚀]                   │
+│                                        │
+│  By creating an account you agree      │
+│  to our Terms of Service and           │
+│  Privacy Policy                        │
+│                                        │
+└────────────────────────────────────────┘
+```
+
+---
+
+## 🔐 Enhanced Login Form
+
+```
+┌────────────────────────────────────────┐
+│  Welcome Back                          │
+│  Sign in to access your dashboard      │
+│                                        │
+│  Email Address                         │
+│  📧 [john@example.com]                │
+│                                        │
+│  Password                              │
+│  🔒 [••••••••••] 👁️                   │
+│  [Forgot password?]                    │
+│                                        │
+│  [Sign In 🔓]                          │
+│                                        │
+│  Demo: Use any registered email        │
+│  and password                          │
+│                                        │
+└────────────────────────────────────────┘
+```
+
+---
+
+## 🔬 Fingerprint Scanner Interface
+
+### Live Scan Mode
+```
+┌─────────────────────────────────────────┐
+│  Fingerprint Scan Step                  │
+│                                         │
+│  ┌──────────────────────────────────┐  │
+│  │ Choose Your Scanning Method:     │  │
+│  │                                  │  │
+│  │  [Live Scan] or [Upload Image]   │  │
+│  └──────────────────────────────────┘  │
+│                                         │
+│  ┌──────────────────────────────────┐  │
+│  │  FINGERPRINT SCAN IN PROGRESS    │  │
+│  │                                  │  │
+│  │     ╭─ ─ ─ ─ ─ ─ ─ ─╮          │  │
+│  │    ╱   Fingerprint   │ \         │  │
+│  │   │   Ridge Pattern   │  \       │  │
+│  │   │  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈  │   |      │  │
+│  │    \  ≈≈≈≈≈≈≈≈≈≈≈≈≈  │  /       │  │
+│  │     ╲≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈├─╯        │  │
+│  │      ╰─ ─ ─ ─ ─ ─ ─ ─╯          │  │
+│  │                                  │  │
+│  │  Scanning: ████████░░░░░ 65%    │  │
+│  │                                  │  │
+│  │  📊 Analyzing Patterns...        │  │
+│  │  🔄 Extracting Ridge Features    │  │
+│  │  📈 Calculating Risk Score       │  │
+│  │  ⏳ Processing...                │  │
+│  └──────────────────────────────────┘  │
+│                                         │
+│  [← Back]  [✓ Scan Complete → Next]    │
+└─────────────────────────────────────────┘
+```
+
+### Upload Image Mode
+```
+┌─────────────────────────────────────────┐
+│  Upload Fingerprint Image               │
+│                                         │
+│  ┌──────────────────────────────────┐  │
+│  │  📁 Drag fingerprint image here  │  │
+│  │     or click to select            │  │
+│  │                                  │  │
+│  │  Supported: PNG, JPG, BMP        │  │
+│  │  Max size: 5MB                   │  │
+│  └──────────────────────────────────┘  │
+│                                         │
+│  [📸 Select File]                      │
+│                                         │
+│  ┌──────────────────────────────────┐  │
+│  │  Uploaded Image:                 │  │
+│  │                                  │  │
+│  │  ┌──────────────────┐            │  │
+│  │  │                  │            │  │
+│  │  │  [Fingerprint]   │ 128x128px  │  │
+│  │  │                  │            │  │
+│  │  └──────────────────┘            │  │
+│  │                                  │  │
+│  │  Analysis Progress:              │  │
+│  │  [████████░░░░░░░░░░] 65%       │  │
+│  │                                  │  │
+│  │  ✓ Ridge Detection              │  │
+│  │  ✓ Whorl Classification         │  │
+│  │  → Minutiae Extraction          │  │
+│  │  → Risk Scoring                 │  │
+│  └──────────────────────────────────┘  │
+│                                         │
+│  [← Back]  [✓ Image Analyzed → Next]    │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 💊 Health Metrics Form
+
+```
+┌────────────────────────────────────────────┐
+│  Step 2: Your Health Information           │
+│                                            │
+│  ┌──────────────────────────────────────┐ │
+│  │ ✓ Fingerprint Data Integrated        │ │
+│  │ Risk Score: 8/15                     │ │
+│  │ [Thumbnail of fingerprint]           │ │
+│  └──────────────────────────────────────┘ │
+│                                            │
+│  Personal Information:                     │
+│  Age: [45]                                │
+│  Gender: [Female ▼]                       │
+│                                            │
+│  Physical Measurements:                    │
+│  Weight (kg): [75]                        │
+│  Height (cm): [165]                       │
+│  BMI: [27.5] (Overweight) ⚠               │
+│                                            │
+│  Vital Measurements:                       │
+│  Blood Pressure: [140] / [90] mmHg        │
+│                                            │
+│  Metabolic Markers:                        │
+│  Glucose Level (mg/dL): [150]            │
+│  Insulin Level (mU/L): [15]              │
+│                                            │
+│  Lifestyle Factors:                        │
+│  Exercise Frequency: [3-4 times/week ▼]  │
+│  Smoking Status: [Never ▼]                │
+│  Family History: [☑ Diabetes]             │
+│                                            │
+│  [← Back] [Generate Prediction →]         │
+└────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 Results Page with Risk Meter
+
+```
+┌─────────────────────────────────────────────┐
+│           YOUR DIABETES RISK ASSESSMENT      │
+│                                             │
+│           ╭──────────────────────╮          │
+│          ╱                        ╲         │
+│         │                          │        │
+│         │      YOUR RISK           │        │
+│         │                          │        │
+│         │      ██████████░░░       │        │
+│         │         65%               │       │
+│         │                          │        │
+│          ╲                        ╱         │
+│           ╰──────────────────────╯          │
+│                                             │
+│    ⚠️  DIABETIC RISK DETECTED               │
+│                                             │
+│  Your risk level is elevated. We            │
+│  recommend consulting with a healthcare    │
+│  provider for further evaluation.          │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  Your Health Metrics Summary:               │
+│                                             │
+│  🧬 Age              45 years               │
+│  📏 BMI              27.5 (Overweight) ⚠   │
+│  💉 Glucose          150 mg/dL (High) ⚠    │
+│  💓 Blood Pressure   140/90 (Elevated) ⚠   │
+│  🔬 Insulin          15 mU/L (High) ⚠      │
+│  👨‍👩‍👧 Family History   Diabetes Present ⚠   │
+│  🚴 Exercise         3-4x/week ✓           │
+│  🚭 Smoking          Never ✓               │
+│  🔍 Fingerprint      65% Risk Factor ⚠     │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  💡 Personalized Recommendations:           │
+│                                             │
+│  🏃 Increase daily physical activity        │
+│     Target: 150 minutes moderate exercise   │
+│                                             │
+│  🍎 Improve diet quality                    │
+│     Reduce refined carbohydrates            │
+│     Increase fiber intake                   │
+│                                             │
+│  🏥 Monitor blood glucose regularly         │
+│     Check glucose levels weekly             │
+│     Keep a health journal                   │
+│                                             │
+│  📋 Consult healthcare provider             │
+│     Get professional diabetes screening     │
+│     Consider preventive medications         │
+│                                             │
+│  ⚖️ Achieve healthy weight                  │
+│     Target BMI: 18.5-24.9                   │
+│     Gradual weight loss recommended         │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  📌 Daily Health Quote:                     │
+│                                             │
+│  "Take care of your body. It's the         │
+│   only place you have to live."             │
+│   - Jim Rohn                                │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  [📥 Download Report]  [📊 View History]   │
+│  [🔄 New Scan]         [⬅️ Back]           │
+│                                             │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## 📈 Prediction History
+
+```
+┌────────────────────────────────────────┐
+│  Your Prediction History               │
+│                                        │
+│  ┌──────────────────────────────────┐ │
+│  │ 📅 Date: 2024-01-15              │ │
+│  │ ⚠️  Risk: 65%                     │ │
+│  │ Verdict: Diabetic Risk Detected  │ │
+│  │ [View Details] [Delete Record]   │ │
+│  └──────────────────────────────────┘ │
+│                                        │
+│  ┌──────────────────────────────────┐ │
+│  │ 📅 Date: 2024-01-10              │ │
+│  │ ⚠️  Risk: 62%                     │ │
+│  │ Verdict: Diabetic Risk Detected  │ │
+│  │ [View Details] [Delete Record]   │ │
+│  └──────────────────────────────────┘ │
+│                                        │
+│  ┌──────────────────────────────────┐ │
+│  │ 📅 Date: 2024-01-05              │ │
+│  │ ✓ Risk: 45%                      │ │
+│  │ Verdict: Non-Diabetic            │ │
+│  │ [View Details] [Delete Record]   │ │
+│  └──────────────────────────────────┘ │
+│                                        │
+│  📈 Trend: Risk increasing over time  │
+│                                        │
+│  [← Back to Dashboard]                 │
+└────────────────────────────────────────┘
+```
+
+---
+
+## 🎨 Color Scheme
+
+| Element | Color | Usage |
+|---------|-------|-------|
+| Primary | Teal #0d9488 | Buttons, links, accents |
+| Background | White/Off-white | Page backgrounds |
+| Text | Dark Gray #1f2937 | Body text, headings |
+| Success | Green #10b981 | Checkmarks, valid inputs |
+| Warning | Amber #f59e0b | Warnings, cautions |
+| Danger | Red #ef4444 | Errors, high risk |
+| Borders | Light Gray #e5e7eb | Lines, separators |
+| Muted | Gray #6b7280 | Secondary text |
+
+---
+
+## 📱 Responsive Breakpoints
+
+```
+Mobile (< 640px)     - Stack layout, large touch targets
+Tablet (640-1024px)  - Two column where appropriate
+Desktop (> 1024px)   - Full width, side-by-side layouts
+```
+
+---
+
+## ✨ Animation Effects
+
+- **Risk Meter:** Circular progress animation
+- **Fingerprint Scan:** Canvas drawing animation with sweep line
+- **Form Validation:** Checkmarks fade in smoothly
+- **Buttons:** Smooth hover and click states
+- **Page Transitions:** Fade in/out between steps
+- **Loading:** Spinning loader with text
+- **Toasts:** Slide in from top right
+
+---
+
+## 🎯 Accessibility Features
+
+- ✓ ARIA labels on all inputs
+- ✓ Semantic HTML (buttons, forms, headings)
+- ✓ Keyboard navigation support
+- ✓ Color contrast ratios > 4.5:1
+- ✓ Focus indicators visible
+- ✓ Alt text on images
+- ✓ Form error messages linked to inputs
+
+---
+
+This visual guide shows exactly what users will see at each step of the application!
